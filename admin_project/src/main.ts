@@ -1,17 +1,16 @@
 import { createApp } from 'vue'
-import App from './App.vue'
+import App from '@/App.vue'
 //引入element-plus
 import ElementPlus from 'element-plus'
 import 'element-plus/dist/index.css'
 import * as ElementPlusIconsVue from '@element-plus/icons-vue'
 //配置element-plus国际化
 import zhCn from 'element-plus/es/locale/lang/zh-cn'
+//配置svg插件
+import 'virtual:svg-icons-register'
 
 const app = createApp(App)
-app.use(ElementPlus, {
-    locale: zhCn,//设置element-plus使用中文
-  })
-  
+
 
   /**
    * 注册图标组件为全局组件，注意这里的组件是以组件标签的形式使用如 <Search />
@@ -25,5 +24,7 @@ app.use(ElementPlus, {
   for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
     app.component(key, component)
   }
-app.use(ElementPlus)
+  app.use(ElementPlus, {
+    locale: zhCn,//设置element-plus使用中文
+  })
 app.mount('#app')
