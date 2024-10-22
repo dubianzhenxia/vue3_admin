@@ -9,11 +9,12 @@ import zhCn from 'element-plus/es/locale/lang/zh-cn'
 //配置svg插件
 import 'virtual:svg-icons-register'
 
+
 const app = createApp(App)
 
 
   /**
-   * 注册图标组件为全局组件，注意这里的组件是以组件标签的形式使用如 <Search />
+   * 注册图标组件为全局组件，注意这里的组件是以组件标签的形式使用如 <Search />   <el-icon><Search /></el-icon>
    * 就是说例如button :icon='Search' 这里面的Search组件使用时需要在vue文件中再次引入，注册
    * 如：
    * 先 import {Search} from '@element-plus/icons-vue'
@@ -27,4 +28,12 @@ const app = createApp(App)
   app.use(ElementPlus, {
     locale: zhCn,//设置element-plus使用中文
   })
+
+  //引入svg组件
+  //import SvgIcon from '@/components/SvgIcon.vue'
+  //注册svg为全局组件
+  //app.component('SvgIcon', SvgIcon)
+  //改用插件方式注册多个全局组件
+  import  globalComponents  from '@/components/index.ts';
+app.use(globalComponents)
 app.mount('#app')

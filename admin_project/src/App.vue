@@ -39,10 +39,11 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import {Search} from '@element-plus/icons-vue'
-import SvgIcon from '@/components/SvgIcon.vue'
+//import SvgIcon from '@/components/SvgIcon.vue'
 const value = ref(0)
 
 </script>
+
 
 
 
