@@ -19,6 +19,7 @@
   "devDependencies": {
     "@types/node": "^20.14.11",
     "@vitejs/plugin-vue": "^5.0.5",
+    "sass": "^1.80.4",
     "typescript": "^5.2.2",
     "vite": "^5.3.4",
     "vite-plugin-svg-icons": "^2.0.1",
