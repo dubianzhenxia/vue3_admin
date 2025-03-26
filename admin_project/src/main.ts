@@ -12,6 +12,20 @@ import 'virtual:svg-icons-register'
 import '@/styles/index.scss'
 
 
+/**
+ * 测试mock
+ *
+import axios from 'axios'
+axios({
+  url:'/api/user/login',
+  method:'post',
+  data:{
+    username: 'admin',
+    password: '111111'
+  }
+})
+*/
+
 const app = createApp(App)
 
 
