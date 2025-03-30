@@ -10,6 +10,9 @@ import zhCn from 'element-plus/es/locale/lang/zh-cn'
 import 'virtual:svg-icons-register'
 //引入全局样式
 import '@/styles/index.scss'
+//引入路由
+import router from "@/router";
+
 
 
 /**
@@ -23,6 +26,12 @@ axios({
     username: 'admin',
     password: '111111'
   }
+})
+
+import request from "@/utils/request.ts";
+request.post('/user/login',{
+  username: 'admin',
+      password: '111111'
 })
 */
 
@@ -51,5 +60,7 @@ const app = createApp(App)
   //app.component('SvgIcon', SvgIcon)
   //改用插件方式注册多个全局组件
   import  globalComponents  from '@/components/index.ts';
+  //注册路由
+app.use(router);
 app.use(globalComponents)
 app.mount('#app')
