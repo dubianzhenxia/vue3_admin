@@ -1,12 +1,13 @@
 //登陆接口的入参类型
 export interface loginRequest {
-usrname: string;
+username: string;
 password: string;
 }
 
 //登陆接口返回data的type
 interface dataType{
     token: string;
+    message: string;
 }
 
 //登陆接口返回值的type

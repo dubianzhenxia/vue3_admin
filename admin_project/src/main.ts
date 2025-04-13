@@ -11,8 +11,9 @@ import 'virtual:svg-icons-register'
 //引入全局样式
 import '@/styles/index.scss'
 //引入路由
-import router from "@/router";
-
+import router from "@/router"
+//引入仓库
+import pinia from "@/store"
 
 
 /**
@@ -61,6 +62,7 @@ const app = createApp(App)
   //改用插件方式注册多个全局组件
   import  globalComponents  from '@/components/index.ts';
   //注册路由
-app.use(router);
+app.use(router)
 app.use(globalComponents)
+app.use(pinia)
 app.mount('#app')

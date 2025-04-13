@@ -15,6 +15,7 @@
     "axios": "^1.8.4",
     "element-plus": "^2.7.7",
     "fast-glob": "^3.3.2",
+    "pinia": "^3.0.1",
     "vue": "^3.4.31",
     "vue-router": "^4.5.0"
   },
