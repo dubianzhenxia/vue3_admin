@@ -9,8 +9,8 @@ export const constantRoute = [
     //登录成功以后展示的路由
     {
         path: '/',
-        component: () => import('@/views/home.vue'),
-        name: 'home'
+        component: () => import('@/views/layout.vue'),
+        name: 'layout'
     },
 
     {

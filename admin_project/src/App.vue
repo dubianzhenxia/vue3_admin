@@ -15,10 +15,7 @@
 
 
 <style scoped lang="scss">
-div{
-  h1{
-    color: variable.$color;
-  }
-}
+@import "@/styles/variable.scss";
+
 
 </style>
